@@ -14,7 +14,7 @@ import { LinearGradient } from "expo-linear-gradient";
 export default Welcome = ({ navigation }) => {
   return (
     <ImageBackground
-      source={require("../assets/Welcome.jpg")}
+      source={require("../assets/welcome.jpg")}
       style={styles.backgroundImage}
     >
       <LinearGradient
@@ -35,12 +35,18 @@ export default Welcome = ({ navigation }) => {
           <Text style={styles.description}>it easily!</Text>
         </View>
         <View>
-          <TouchableOpacity style={styles.login}>
+          <TouchableOpacity
+            style={styles.login}
+            onPress={() => navigation.navigate("Home")}
+          >
             <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
               Login
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.signup}>
+          <TouchableOpacity
+            style={styles.signup}
+            onPress={() => navigation.navigate("Home")}
+          >
             <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
               Sign Up
             </Text>
